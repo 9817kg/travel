@@ -13,3 +13,5 @@ https://github.com/9817kg/travel/assets/137484097/010f2eba-631f-430c-9cab-9d72fb
 
 ### (수정) 메인페이지
 ### ( 개발 ) intro 페이지
+
+https://github.com/9817kg/travel/assets/137484097/22d0288e-af88-4cc0-b1db-a342b6f4d400
