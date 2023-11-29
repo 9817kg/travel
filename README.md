@@ -15,3 +15,4 @@ https://github.com/9817kg/travel/assets/137484097/010f2eba-631f-430c-9cab-9d72fb
 ### ( 개발 ) intro 페이지
 
 
+![image](https://github.com/9817kg/travel/assets/137484097/b57f9f90-71e6-4b56-a697-0ec00a2bf9f2)
