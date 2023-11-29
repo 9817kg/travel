@@ -9,3 +9,7 @@ https://github.com/9817kg/travel/assets/137484097/50e1e20c-dc63-4869-9def-3234bc
 
 
 https://github.com/9817kg/travel/assets/137484097/010f2eba-631f-430c-9cab-9d72fb9e949b
+
+
+### (수정) 메인페이지
+### ( 개발 ) intro 페이지
