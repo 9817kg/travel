@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu header</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/header.css}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<header>
+    <!-- 햄버거 버튼 -->
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+    <div class="menu-container">
+        <div class="logo">
+            <a href="/main">9817Kg </a>
+        </div>
+        <div class="menu-left">
+            <div class="menu-item">
+                <a>Community</a>
+                <div class="sub-menu">
+                    <a href="/my/notice">Notice</a> <br> <a href="/my/qna?type=qna">Q & A</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a>aaaa</a>
+                <div class="sub-menu">
+                    <a href="/my/java">Java</a> <br>
+                    <a href="/my/python">Python</a> <br>
+                    <a href="/my/springboot">spring boot</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a>FrontEnd</a>
+                <div class="sub-menu">
+                    <a href="/my/javascript">javaScript</a> <br> <a href="/my/hs">html/css</a>
+                    <a href="/my/react">react</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 검색창 스타일 -->
+        <div class="search-container">
+            <form action="/my/search" method="post">
+                <select class="type" name="type">
+                    <option class="search-select" value="">Choice</option>
+                    <option value="title">국가</option>
+                    <option value="category">숙소</option>
+                    <option value="provider">비행편</option>
+                    <!-- 다른 옵션들도 추가할 수 있음 -->
+                </select>
+                <input type="text" class="search-input" name="search" placeholder="검색어를 입력하세요">
+                <button class="search-button" type="submit">search</button>
+            </form>
+        </div>
+
+        <div class="menu-right">
+            <div class="menu-item">
+                <a href="/login">Login</a>
+            </div>
+            <div class="menu-item">
+                <a href="/join">Join</a>
+            </div>
+            <div class="menu-item">
+                <!--화면 우측 상단에 로그인 시 userName 출력  -->
+                <a href="/view/login">로그인 후 이용해주세요.</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 사이드바 -->
+    <div class="sidebar2" id="sidebar2">
+        <a href="#">숙소</a>
+        <a href="#">여행지</a>
+        <a href="#">공지사항</a>
+        <a href="#">질문게시판</a>
+        <a href="/mypage">마이페이지</a>
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+    </div>
+</header>
+
+<script>
+    // Cart 메뉴 클릭 시 알림 표시 후 로그인 페이지로 이동
+    var cartMenuItem = document.querySelector('.sidebar2 a[href="/mypage"]');
+    cartMenuItem.addEventListener('click', function(event) {
+        event.preventDefault(); // 링크 클릭 기본 동작 방지
+        // 알림 표시
+        alert("로그인 후 이용 가능합니다. 로그인 페이지로 이동합니다.");
+        // 로그인 페이지로 이동
+        window.location.href = "/view/login"; // 로그인 페이지 URL로 이동
+    });
+
+    function searchFunction() {
+        var searchQuery = document.getElementById("search").value;
+        if (searchQuery.trim() !== "") {
+            // 검색어를 사용하여 검색 로직을 추가
+            // 여기에 검색 결과를 표시하거나 검색 페이지로 리다이렉트할 수 있습니다.
+            alert("검색어: " + searchQuery);
+        } else {
+            alert("검색어를 입력하세요.");
+        }
+    }
+
+    // 화면 크기에 따라 햄버거 버튼 및 사이드바 토글
+    $(window).on('resize', function() {
+        if ($(window).width() < 768) {
+            $('.hamburger').show();
+            $('.sidebar2').hide();
+        } else {
+            $('.hamburger').hide();
+            
+        }
+    });
+
+    // 햄버거 버튼 클릭 시 사이드바 토글
+    function toggleSidebar() {
+        $('.sidebar2').toggle();
+    }
+</script>
+
+</body>
+</html>
