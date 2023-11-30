@@ -92,9 +92,8 @@ public class UserProfile {
                 .name(this.name)
                 .email(this.email)
                 .joinDate(this.joinDate)
-                .memberType(this.memberType)
-                .birth(this.birth)
-                .phone(this.phone)
+                
+                
                 .provider(this.provider)
                 .role("USER")
                 .build();
