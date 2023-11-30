@@ -131,6 +131,8 @@ a {
 .menu-item a:hover {
 	color: white;
 	text-decoration: none;
+	font-size: 19px;
+	transition: all 1s;
 }
 
 /* 기본 메뉴 항목 스타일 */
@@ -139,6 +141,7 @@ a {
 	text-decoration: none;
 	transition: color 0.3s;
 	font-style: italic;
+	font-size: 17px;
 }
 
 /* 로고 스타일 */
@@ -159,6 +162,8 @@ a {
 
 .logo a:hover {
 	color: black;
+	font-size: 40px;
+	transition: all 1s;
 }
 
 /* 서브 메뉴 항목 스타일 */
@@ -182,6 +187,7 @@ a {
 	
 	color: black; /* Change text color to white */
 	text-decoration: none; /* Remove underline */
+	font-size: 17px
 }
 
 .search-container {
@@ -219,7 +225,7 @@ a {
 	text-align: 20px;
 	color: white;
 	font-size: 25px;
-	border: 3px solid black;
+	border: 3px solid transparent;
 	border-radius: 20px;
 	background-color: transparent;
 	text-transform: uppercase;
@@ -242,7 +248,7 @@ a {
 	background-color: white;
 	top: 100%;
 	left: 0;
-	transition: all 0.4s;
+	transition: all 1s;
 	z-index: -1;
 }
 

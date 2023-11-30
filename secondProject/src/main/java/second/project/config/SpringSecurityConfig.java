@@ -38,7 +38,7 @@ public class SpringSecurityConfig {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(request -> request
                                 .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
-                                .requestMatchers("/status", "/view/join", "/auth/join", "/my/", "/my/main").permitAll()
+                                .requestMatchers("/status", "/join", "/auth/join", "/main").permitAll()
                                 .requestMatchers("/findEmail", "/resultFindEmail", "/findPw").permitAll()
                                 .requestMatchers("/**").permitAll()
                                 .requestMatchers("/info/teacherInfo").permitAll()
@@ -48,7 +48,7 @@ public class SpringSecurityConfig {
                                 .anyRequest().authenticated()
                 )
                 .formLogin(login -> login
-                                .loginPage("/view/login")
+                                .loginPage("/login")
                                 .loginProcessingUrl("/login-process")
                                 .usernameParameter("email")
                                 .passwordParameter("password")
@@ -60,16 +60,16 @@ public class SpringSecurityConfig {
                                             .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
                                         response.sendRedirect("/admin/admin");
                                     } else {
-                                        response.sendRedirect("/view/mainLog");
+                                        response.sendRedirect("/main");
                                     }
                                 })
 
 
                 )
                 .oauth2Login(oauth2Configurer -> oauth2Configurer
-                                .loginPage("/view/login")
+                                .loginPage("/login")
 
-                                .defaultSuccessUrl("/view/mainLog2", true) // ·Î±×ÀÎ ¼º°ø½Ã ÀÌµ¿ÇÒ URL
+                                .defaultSuccessUrl("/main", true) // ·Î±×ÀÎ ¼º°ø½Ã ÀÌµ¿ÇÒ URL
                                 .userInfoEndpoint()// »ç¿ëÀÚ°¡ ·Î±×ÀÎ¿¡ ¼º°øÇÏ¿´À» °æ¿ì,
                        
                                 .userService(oAuth2UserService)// ÇØ´ç ¼­ºñ½º ·ÎÁ÷À» Å¸µµ·Ï ¼³Á¤
