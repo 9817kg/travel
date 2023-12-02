@@ -39,10 +39,10 @@ body {
 }
 .login-form h2:nth-child(1) {
 	color: transparent;
-	-webkit-text-stroke: 2px black;
+	-webkit-text-stroke: 2px white;
 }
 .login-form h2:nth-child(2) {
-	color: black;
+	color: white;
 	animation: animate 4s ease-in-out infinite;
 }
 
@@ -82,7 +82,7 @@ body {
 .login-form label {
 	display: block;
 	font-size: 18px;
-	color: black;
+	color: white;
 	font-weight:bolder;
 	margin-bottom: 10px;
 }
@@ -126,6 +126,9 @@ body {
    	font-weight: bolder;
    	width: 190px;
 	height: 50px;
+	background-color:white;
+	color: black;
+	 
 }
 
 
@@ -138,7 +141,7 @@ body {
 
 .register-button a {
 	text-decoration: none;
-	color: black;
+	color: white;
 	font-size: 18px;
 }
 
@@ -151,7 +154,7 @@ body {
 .auth2 #kakao{
 	text-decoration: none;
 	border: 3px solid yellow;
-	
+	color:black;
 	padding: 1px;
 	background-color: yellow;
 	border-radius: 10px;
@@ -164,14 +167,14 @@ body {
 	
 	padding: 1px;
 	background-color: white;
-
+color:black;
 	border-radius: 10px;
 }
 
 .auth2 #naver{
 	text-decoration: none;
 	border: 3px solid green;
-	
+	color:black;
 	padding: 1px;
 	background-color: green;
 	border-radius: 10px;
@@ -219,18 +222,20 @@ body {
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-	border: 1px solid;
+	border: 1px solid transparent;
 	border-radius: 20px;
 	padding: 5px;
-	background-image: url("/images/숙소.jpg");
+	background-color: transparent;
 }
 
 .find-links a:hover {
 	text-decoration: none;
 	transition: all 1s;
 	font-weight: bolder;
-	border: 1px solid;
+	border: 1px solid white;
 	padding: 10px;
+	color: black;
+	background-color: white;
 }
 .id {
 	width: 100%;
@@ -258,7 +263,7 @@ body {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	background-image: url(/images/main.jpg); /* 이미지 파일의 경로를 적절히 수정해주세요 */
+	background-image: url(/images/logj.jpg); /* 이미지 파일의 경로를 적절히 수정해주세요 */
 	background-size: cover; /* 배경 이미지를 화면에 맞게 조절 */
 	background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
 	background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 여부 (선택사항) */

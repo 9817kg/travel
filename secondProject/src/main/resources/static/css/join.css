@@ -1,10 +1,18 @@
 @charset "UTF-8";
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+/* 전체 페이지 스타일 */
+* {
+	
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
 * {
 	margin: 0px;
 	padding: 0px;
 	text-decoration: none;
-	font-family: sans-serif;
+	
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -15,33 +23,35 @@ body {
 }
 
 .joinForm {
-	position:absolute;
-	background-color:transparent; /* 로그인 폼 배경색 및 투명도 조절 */
-	padding: 20px;
-	right:400px;
-	width: 50%;
-	text-align: center;
-	margin: 100px auto; /* 수평 가운데 정렬 */
-	top: 20%;
+    position: absolute;
+    background-color: transparent;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    margin: auto; /* 좌우 중앙 정렬 */
+    top: 60%; /* 화면 세로 중앙 정렬을 위해 top을 50%로 설정 */
+    left: 50%; /* 화면 가로 중앙 정렬을 위해 left를 50%로 설정 */
+    transform: translate(-50%, -50%); /* 화면 중앙 정렬을 위해 transform을 사용하여 조정 */
 }
 
+
+
+
 .joinForm h2 {
-	text-align: center;
-	margin: 30px;
-	font-size: 100px;
-	position: absolute;
-	white-space: nowrap;
-	top: -170px;
-	right: 300px;
-	
-	
+    text-align: center;
+    
+    font-size: 150px; /* 크기를 조절할 값으로 변경 */
+    position: absolute;
+    white-space: nowrap;
+    top: -170px;
+    right: 230px;
 }
 .joinForm h2:nth-child(1) {
 	color: transparent;
-	-webkit-text-stroke: 2px black;
+	-webkit-text-stroke: 2px white;
 }
 .joinForm h2:nth-child(2) {
-	color: black;
+	color: white;
 	animation: animate 4s ease-in-out infinite;
 }
 
@@ -78,12 +88,17 @@ body {
 
 
 .textForm {
-	border-bottom: 1px solid #E6E6E6;
+	border:1px solid white;
 	margin: 30px;
-	padding: 10px 10px;
+	padding: 10px 0px;
+	border-radius: 25px;
 }
-
-
+label{
+	font-weight: bolder;
+	font-size: 15px;
+	margin: 0;
+	
+}
 
 .pw {
 	width: 100%;
@@ -105,11 +120,21 @@ body {
 	font-weight: bolder;
 }
 .textForm :hover{
-	font-size: 20px;
+	
+	padding:20px;
 	color: black;
-	transition: all 2s;
+	transition: all 1.5s;
 }
-
+.ph{
+	
+	width: 100%;
+	border: none;
+	outline: none;
+	color: black;
+	font-size: 16px;
+	height: 25px;
+	background: none;
+}
 .name {
 	width: 100%;
 	border: none;
